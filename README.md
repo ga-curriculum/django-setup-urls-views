@@ -150,8 +150,8 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
-  'rest_framework',
-  'main_app',
+  	'rest_framework',
+  	'main_app',
 ]
 ```
 
@@ -208,7 +208,7 @@ You should see something similar to this:
 
 😄 Nice - no more pending migrations! We will cover migrations in more detail in the next lesson.
 
-## 5. Defining Routes (URLs)
+## 4. Defining Routes (URLs)
 
 Just like with Express, there needs to be a route defined that matches each HTTP request coming from the browser.
 
@@ -299,7 +299,7 @@ The `name='home'` kwarg gives the route a name.  Naming a route is optional, but
 
 The Home route has been defined!  On to the view...
 
-## 6. Defining View Functions
+## 5. Defining View Functions
 
 <details>
 <summary>
@@ -327,7 +327,7 @@ def home(request):
   return render(request, 'home.html')
 ```
 
-## 11. Summary
+## 6. Summary
 
 You now have a minimal (but functional) application setup that responds with JSON.
 
@@ -335,7 +335,7 @@ You now know pretty much *all there is to know* about the structure of a Django 
 
 In the next lesson, we'll learn about Django Models where we'll code a `Cat` Model and use it to "CRUD" 😸😸😸 inside of the database!
 
-## 12. Labs for Cat Collector Lessons
+## 7. Labs for Cat Collector Lessons
 
 In this unit, the goal of each Django lab will be to repeat everything we've done in the lesson -- except you'll "collect" something new (like Finches) and call the project something like ***finchcollector***, or whatever you are collecting 😀
 
