@@ -90,6 +90,12 @@ Next, install the necessary dependencies
 pipenv install django psycopg2-binary djangorestframework
 ```
 
+Open the project folder in VS Code:
+
+```
+code .
+```
+
 ### Create the database
 
 Databases are not automatically created by Django, so let's create one.
@@ -119,12 +125,6 @@ django-admin startproject catcollector .
 ```
 
 The above command generated and configured a Django project named **catcollector**.
-
-Open the project folder in VS Code:
-
-```
-code .
-```
 
 ### Create the App
 
