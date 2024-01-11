@@ -270,7 +270,6 @@ Start by setting up ***main_app***'s ***urls.py*** file. But wait...there's not 
 
 	```python
 	from django.urls import path
-	from . import views
 	
 	urlpatterns = [
 	
@@ -288,8 +287,10 @@ With the setup done, we're ready to define the route to return our first respons
 In **main_app/urls.py**:
 
 ```python
+from .views import Home
+
 urlpatterns = [
-  path('', views.home, name='home'),
+  path('', Home.as_view(), name='home'),
 ]
 ```
 
@@ -319,13 +320,30 @@ We will define all of the app's views in **main_app/views.py**.
 Let's define the `home` view function and respond with JSON (since we are building a RESTful API):
 
 ```python
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 # Define the home view
-def home(request):
-  # Include an .html file extension - unlike when rendering EJS templates
-  return render(request, 'home.html')
+class Home(APIView):
+  def get(self, request):
+    content = {'message': 'Welcome to the cat-collector api home route!'}
+    return Response(content)
 ```
+
+** A few things to keep in mind **
+We have removed the render import, which traditionally only serves HTML templates, from the original code in the views file with imports from django rest framework:
+
+** APIView: **
+
+- APIView is a class provided by Django Rest Framework that is used as a base for all views in DRF.
+- It extends Django's basic View class and provides additional functionality that is specific to working with APIs.
+- Using APIView allows you to handle different HTTP methods (GET, POST, etc.) with class methods and provides features like authentication, permissions, and throttling.
+
+** Response: **
+
+- Response is a class in DRF that is used to return responses from your API views.
+- It extends the basic HttpResponse from Django but is specifically tailored for returning data in various formats (like JSON, XML, etc.).
+- DRF's Response class also handles content negotiation based on the client's request, meaning it can automatically adjust the response format (JSON, HTML, etc.) based on what the client can accept.
 
 ## 6. Summary
 
