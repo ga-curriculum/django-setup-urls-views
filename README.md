@@ -287,6 +287,7 @@ With the setup done, we're ready to define the route to return our first respons
 In **main_app/urls.py**:
 
 ```python
+# import Home view from the views file
 from .views import Home
 
 urlpatterns = [
