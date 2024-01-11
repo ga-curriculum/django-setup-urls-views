@@ -331,8 +331,7 @@ class Home(APIView):
     return Response(content)
 ```
 
-**A few things to keep in mind**
-We have removed the render import, which traditionally only serves HTML templates, from the original code in the views file with imports from django rest framework:
+**A few things to keep in mind** - We have removed the render import, which traditionally only serves HTML templates, from the original code in the views file with imports from django rest framework:
 
 **APIView:**
 
