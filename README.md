@@ -331,16 +331,16 @@ class Home(APIView):
     return Response(content)
 ```
 
-** A few things to keep in mind **
+**A few things to keep in mind**
 We have removed the render import, which traditionally only serves HTML templates, from the original code in the views file with imports from django rest framework:
 
-** APIView: **
+**APIView:**
 
 - APIView is a class provided by Django Rest Framework that is used as a base for all views in DRF.
 - It extends Django's basic View class and provides additional functionality that is specific to working with APIs.
 - Using APIView allows you to handle different HTTP methods (GET, POST, etc.) with class methods and provides features like authentication, permissions, and throttling.
 
-** Response: **
+**Response:**
 
 - Response is a class in DRF that is used to return responses from your API views.
 - It extends the basic HttpResponse from Django but is specifically tailored for returning data in various formats (like JSON, XML, etc.).
