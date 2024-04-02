@@ -199,7 +199,7 @@ We use migrations to update the database's schema over time to meet the project'
 There are several migrations **pending** (i.e., *waiting to be applied to the database*) - so let's apply them:
 
 ```
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 You should see something similar to this:
