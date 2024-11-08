@@ -76,7 +76,7 @@ Luckily for us though, the basics aren’t too bad though, as long as you don’
 
 ## 3. Start the **Cat Collector** Project
 
-Let's begin with an initial setup. First create a directory inside of your lessons folder called **django-catcolletor**.
+Let's begin with an initial setup. First create a directory inside of your lessons folder called **django-catcollector**.
 
 CD into that directory and set up your virtual environment
 
